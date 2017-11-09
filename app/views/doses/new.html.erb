@@ -1,11 +1,11 @@
 <h1>New</h1>
 
-<%= form_for [@cocktail, @dose] do |f| %>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
 
-  <%= f.submit "add a description", class: "btn btn-primary" %>
+  <%= f.submit "add a dose", class: "btn btn-primary" %>
 
 
 <% end %>
